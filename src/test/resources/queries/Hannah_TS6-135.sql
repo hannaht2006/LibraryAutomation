@@ -1,6 +1,5 @@
-select * from users;
+select *from users;
 
-select id from users;
+select *from books;
 
-
-select distinct id from users;
+select name from book_categories;
