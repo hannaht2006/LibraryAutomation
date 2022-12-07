@@ -2,4 +2,5 @@ select *from users;
 
 select *from books;
 
-select name from book_categories;
+select count(*) name from book_categories;
+select  name from book_categories;

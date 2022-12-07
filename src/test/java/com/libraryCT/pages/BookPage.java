@@ -5,6 +5,8 @@ import com.libraryCT.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ISelect;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -36,12 +38,20 @@ public class BookPage extends BasePage {
     @FindBy(id = "description")
     public WebElement description;
 
+    @FindBy(xpath = "//select[@id='book_categories']")
+    public List<WebElement> book_categories;
+
+    @FindBy(xpath = "//select[@id='book_categories']")
+    public WebElement bookList;
+
 
 
     public WebElement editBook(String book) {
         String xpath = "//td[3][.='" + book + "']/../td/a";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
+
+
 
 
 
